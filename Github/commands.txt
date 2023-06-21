@@ -1,0 +1,5 @@
+1. commands = git add .
+2. commands = git commit -m "yv5"
+3. commands = git push -u origin
+
+Güncelleme commands = git pull
