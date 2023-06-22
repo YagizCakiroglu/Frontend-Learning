@@ -1,0 +1,21 @@
+Uygulama 4:
+
+* "movie-app/uygulama-3" klasörünü "uygulama-4" ismiyle kopyalayınız..
+
+"en-iyi-filmler.html" sayfasını aşağıdaki semantic etiketleriyle düzenleyiniz.
+
+    - <header>
+    - <nav>
+    - <section>
+    - <main>
+    - <aside>
+    - <article>
+
+* "en-iyi-filmler.html" sayfasının header kısmına yan yana linkler ekleyiniz.
+    - "en iyi filmler", "en son çıkan filmler", en fazla oy alan filmler"
+
+* "en-iyi-filmler.html" sayfasına kategori linkini liste olarak ekleyiniz.
+    => Tüm Katagoriler, Macera, Dram, Komedi...
+
+* liste işaretini siliniz.
+
