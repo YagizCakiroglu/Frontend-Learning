@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="register.php">
+
+        <div>
+            <label for="name">Adınız</label>
+        <input type="text" id="name">
+        </div>
+        <div>
+            <label for="surname">Soyad</label>
+            <input type="text" id="surname">
+        </div>
+
+        <div>
+            <label for="parola">Parola</label>
+            <input type="password" id="parola">
+        </div>
+
+        <div>
+            <label for="intro">Kendini Anlat</label>
+            <textarea id="intro" cols="30"></textarea>
+        </div>
+        <div>
+            <p>En sevdiğin programlama dili:</p>
+            <input type="radio" id="html2" name="programlama">
+            <label for="html2">HTML</label><br>
+
+            <input type="radio" id="css2" name="programlama">
+            <label for="css2">CSS</label><br>
+
+            <input type="radio" id="javascript2" name="programlama">
+            <label for="javascript2">Javascript</label>
+        </div>
+
+        <div>
+            <p>En sevdiğin programlama dili:</p>
+            <input type="checkbox" id="html" >
+            <label for="html">HTML</label><br>
+
+            <input type="checkbox" id="css" >
+            <label for="css">CSS</label><br>
+
+            <input type="checkbox" id="javascript" >
+            <label for="javascript">Javascript</label>
+        </div>
+
+        <div>
+            <label for="cities">Şehir</label>
+            <select  id="cities">
+                <option value="41">Kocaeli</option>
+                <option value="34">İstanbul</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="eposta">Email</label>
+            <input type="email" id="eposta">
+        </div>
+
+        <div>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+
+        <div>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile">
+        </div>
+
+        <div>
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+        </div>
+
+        <button type="submit">Kaydet</button>
+        <button type="reset">Temizle</button>
+
+    </form>
+</body>
+</html>
