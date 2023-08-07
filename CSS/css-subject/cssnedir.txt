@@ -1,0 +1,90 @@
+Css Nedir?
+HTML'e ek olarak metin ve format biçimlendirme alanında fazladan olanaklar sunan bir işaretleme dilidir.
+Css Söz Dizimi:
+Seçici, biçimlendirmek, stil vermek istediğiniz HTML elementini ifade eder. Bildirim, noktalı virgül ile ayrılmış, özellik - değer çiftlerinden oluşur. Bu özellikler CSS özellikleridir.
+https://sadikturan.com/img/Course/css-sozdizimi-sadikturan.com.gif
+
+
+Inline Css Nedir ve Nasıl Kullanılır ?
+Sadece tanımlandığı etiket için geçerli olmasını istediğimiz css kodlarımızı inline olarak tanımlarız.
+
+Örneğin ; <span style="color:red;"> text </span> 
+
+Inline olarak tanımladığımız css kodları sadece css kodunun tanımlandığı <span> etiketi için uygulanır ve yazı rengi kırmızı olur.
+
+Eğer ki sayfadaki tüm <span> etiketleri için bir css kodu yazmak istersek bu yöntemi kullanmamalıyız çünkü sayfadaki her bir <span> etiketi içine <span style="color:red;"> text </span> şeklinde bir tanımlama yapmak oldukça güç olur.
+
+Örneğin; sayfadaki tüm <a> etiketleri için değil de sadece bir tek <a> etiketi için text-decoration:none; yani linkin altında oluşan çizgiyi silmek için gereken bir css kodunu yazmak istersek aşağıdaki gibi yazabiliriz.
+
+<a href="http://sadikturan.com" style="text-decotation:none;">
+     ziyaret etmek için tıklayınız.
+</a>
+peki inline olarak birden fazla css kodunu nasıl eklerim ?
+
+** araya ; ekleyerek birden fazla css tanımlamasını inline olarak yapabilirsiniz.
+
+<a href="http://sadikturan.com" style="text-decotation:none;color:red">
+     ziyaret etmek için tıklayınız.
+</a>
+
+Internal Css Nedir ve Nasıl Kullanılır ?
+Internal css <head> </head> etiketleri arasına <style type="text/css"> </style> etiketleri eklenerek kullanılır.
+
+<head>
+
+   <style type="text/css"> 
+   
+        h1{
+           font-size :32px;
+           color :blue;  
+        }
+
+   </style>
+
+</head>
+Internal olarak tanımlanan css kodları sadece bulunduğu html sayfasını ilgilendirir. Yani index.html sayfamız içindeki tüm <h1> etiketleri için font büyüklüğü 32 px ve yazı rengi mavi olarak tanımlanır. Ancak about.html sayfamız için bu özellikler etkin olmaz. Eğer aynı özellikleri about.html sayfası içinde uygulansın istiyorsak aynı tanımlamaları about.html sayfasında da yapmamız gerekir. Dolayısıyla sadece bir .html sayfasına özgü olan özellikleri Internal olarak tanımlamak mantıklıdır.
+
+External Css Nedir ve Nasıl Kullanılır ?
+Eğer tanımladığımız css kodları birden fazla html sayfasını ilgilendiriyor ise bu durumda .css uzantılı bir dosya oluşturup bu dosya içerisine css kodlarımızı tanımlamamız gerekir.
+
+Örneğin; index.html ve about.html sayfalarımız var ve bu iki sayfada da <h1> etiketi için ortak olan css kodları yazmak istiyoruz. Bu durumda external css kullanmalıyız yani yeni bir .css uzantılı bir dosya oluşturup bu dosya içine ortak olan css kodlarını eklemek en kolayı olacaktır. Çünkü oluşturduğumuz .css uzantılı dosyayı istediğimiz html sayfasına eklememiz oldukça kolaydır.
+
+Yeni bir style.css dosyası oluşturalım ve dosya içeriğini aşağıdaki gibi güncelleyelim.
+
+ h1 {
+     font-size :32px;
+     color :blue;  
+ }
+ p {
+     color : red;
+     font-size: 16px;
+ }
+style.css dosyası içindeki css kodlarını uygulamak istediğimiz her html sayfasına style.css dosyasını tanıtmamız gerekiyor. Bu işlemi aşağıdaki gibi yapabiliriz.
+
+Html ve style.css dosyamız aynı dizin yani aynı klasör içinde ise bu durumda css dosyamız ile html dosyamızı şu şekilde ilişkilendirebiliriz.
+
+<head>
+   ...
+   <link rel="stylesheet" href="style.css">
+   ...   
+</head>
+** index.html ve about.html sayfamız için bu işlemi tekrarlamamız gerekiyor. Ardından bu iki html sayfamız için ilgili css kodlarının hepsi etkin olacaktır.
+
+Eğer ki aşağıdaki css kodumuzu 3 farklı şekilde tanımlarsak bunların birbirine üstün gelmesi söz konusudur. Örneğin aşağıdaki <p> etiketi için 3 farklı şekilde css kodu yazalım.
+
+<p>
+   Komple Uygulamalı Web Geliştirme Eğitimi
+</p>
+inline olarak => color : red;
+
+internal olarak => color : blue;
+
+external olarak => color : yellow;
+
+Bu durumda <p> etiketi içindeki yazının rengi kırmızı (red) olacaktır.
+
+Öncelik sıralaması şu şekildedir.
+
+Inline
+Internal
+External
