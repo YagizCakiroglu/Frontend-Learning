@@ -7,7 +7,7 @@
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1.0">
 	<title>
-		Build a Survey Form using HTML and CSS
+		Anket Formu Oluşturma
 	</title>
 
 	<style>
@@ -80,7 +80,7 @@
 </head>
 
 <body>
-	<h1>Survey Form</h1>
+	<h1>Anket formu</h1>
 
 	
 	<form id="form">
@@ -88,13 +88,13 @@
 		<!-- Details -->
 		<div class="form-control">
 			<label for="name" id="label-name">
-				Name
+				İsim
 			</label>
 
 			<!-- Input Type Text -->
 			<input type="text"
 				id="name"
-				placeholder="Enter your name" />
+				placeholder="Adınızı giriniz" />
 		</div>
 
 		<div class="form-control">
@@ -105,63 +105,54 @@
 			<!-- Input Type Email-->
 			<input type="email"
 				id="email"
-				placeholder="Enter your email" />
+				placeholder="E-postanızı giriniz" />
 		</div>
 
 		<div class="form-control">
 			<label for="age" id="label-age">
-				Age
+				Yaş
 			</label>
 
 			<!-- Input Type Text -->
 			<input type="text"
 				id="age"
-				placeholder="Enter your age" />
+				placeholder="Yaşınızı girin" />
 		</div>
 
 		<div class="form-control">
 			<label for="role" id="label-role">
-				Which option best describes you?
+				Hangi seçenek sizi en iyi tanımlıyor?
 			</label>
 			
 			<!-- Dropdown options -->
 			<select name="role" id="role">
-				<option value="student">Student</option>
-				<option value="intern">Intern</option>
+				<option value="student">Öğrenci</option>
+				<option value="intern">Stajyer</option>
 				<option value="professional">
-					Professional
+					Profesyonel
 				</option>
-				<option value="other">Other</option>
+				<option value="other">Hiçbiri</option>
 			</select>
 		</div>
 
 		<div class="form-control">
 			<label>
-				Would you recommend GeeksforGeeks
-				to a friend?
+				Bizi tavsiye eder misiniz?
 			</label>
 
 			<!-- Input Type Radio Button -->
-			<label for="recommed-1">
-				<input type="radio"
-					id="recommed-1"
-					name="recommed">Yes<input>
-			</label>
-			<label for="recommed-2">
-				<input type="radio"
-					id="recommed-2"
-					name="recommed">No<input>
-			</label>
-			<label for="recommed-3">
-				<input type="radio"
-					id="recommed-3"
-					name="recommed">Maybe<input>
-			</label>
+			<!-- Input Type Radio Button | Dropdown options -->
+			<select name="input" id="input">
+				<option value="yes">Evet</option>
+				<option value="no">Hayır</option>
+				<option value="maybe">Belki</option>
+			</select>
 		</div>
 
 		<div class="form-control">
-			<label>Languages and Frameworks known
-				<small>(Check all that apply)</small>
+			<label>Bilinen Diller ve Çerçeveler
+				<small>
+					(Tüm başvuruyu kontrol et)</small>
 			</label>
 			<!-- Input Type Checkbox -->
 			<label for="inp-1">
@@ -198,7 +189,7 @@
 
 		<div class="form-control">
 			<label for="comment">
-				Any comments or suggestions
+				Herhangi bir yorum veya öneri
 			</label>
 
 			<!-- multi-line text input control -->
@@ -209,7 +200,7 @@
 
 		<!-- Multi-line Text Input Control -->
 		<button type="submit" value="submit" onclick="alert('Form Gönderildi!')">
-			Submit
+			Gönder
 		</button>
 	</form>
 </body>
