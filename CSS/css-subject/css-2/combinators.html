@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+        /* div p {
+            background-color: red;
+        } */
+        /* div > p {
+            background-color: red;
+        } */
+        /* div + p {
+            background-color: red;
+        } */
+        div ~ p {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Combinators -->
+
+    <!-- 1- Descendant Selector ( ) -->
+    <p>1.Pragraf</p>
+    <div>
+        <p>2.Pragraf</p>
+        <p>3.Pragraf</p>
+        <section>
+            <p>5.Pragraf</p>
+        </section>
+    </div>
+    <p>5.Pragraf</p>
+    <p>6.Pragraf</p>
+    <!-- 2- Child Selector (>) [Bu bana sadece alt elemanları belirtir. Section bir torun olduğundan içermez.] -->
+    <!-- 3- Adjacent Sibling(Daha Sonraki|Kardeş) Selector (+) [Yan yana olanları ifade eder. Yani Div'den sonra gelen 5. Pragrafı ifade eder.]-->
+    <!-- 4- General Sibling(Daha Sonraki|Kardeş) Selector (~) -->
+    <!-- https://www.w3schools.com/css/css_combinators.asp -->
+    <!-- 
+        Selector	           Example	                      Example description
+        element element	        div p	            Selects all <p> elements inside <div> elements
+        element>element	      div > p	            Selects all <p> elements where the parent is a <div> element
+        element+element	      div + p	            Selects the first <p> element that are placed immediately after <div> elements
+        element1~element2	    p ~ ul	            Selects every <ul> element that are preceded by a <p> element
+    -->
+
+
+
+</body>
+</html>
