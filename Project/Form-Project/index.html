@@ -13,37 +13,38 @@
         h1 {
             color: #FFFD8C;
         }
-		/* Styling the Body element i.e. Color,
-		Font, Alignment */
+		/* Body elemanını şekillendirmek yani Renk,
+        Yazı Tipi, Hizalama */
 		body {
 			background-color: #7091F5;
 			font-family: Verdana;
 			text-align: center;
 		}
 
-		/* Styling the Form (Color, Padding, Shadow) */
+		/* Formu Şekillendirme (Renk, Dolgu, Gölge) */
 		form {
 			background-color: #FFFD8C;
 			max-width: 500px;
 			margin: 50px auto;
 			padding: 30px 20px;
 			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
 		}
 
-		/* Styling form-control Class */
+		/* Form kontrol sınıfını şekillendirme */
 		.form-control {
 			text-align: left;
 			margin-bottom: 25px;
 		}
 
-		/* Styling form-control Label */
+		/* Form kontrol etiketini şekillendirme */
 		.form-control label {
 			display: block;
 			margin-bottom: 10px;
 		}
 
-		/* Styling form-control input,
-		select, textarea */
+		/* Form kontrol girişinin şekillendirilmesi,
+        seç, metin alanı */
 		.form-control input,
 		.form-control select,
 		.form-control textarea {
@@ -55,15 +56,15 @@
 			width: 95%;
 		}
 
-		/* Styling form-control Radio
-		button and Checkbox */
+		/* Form-kontrol Radyosunun şekillendirilmesi
+        düğmesi ve Onay Kutusu */
 		.form-control input[type="radio"],
 		.form-control input[type="checkbox"] {
 			display: inline-block;
 			width: auto;
 		}
 
-		/* Styling Button */
+		/* Şekillendirme Düğmesi */
 		button {
 			background-color: #97FFF4;
 			border: 1px solid #777;
@@ -76,25 +77,42 @@
 			margin-bottom: 20px;
 		}
 	</style>
-	<script>
-		function isValid(frm)
-		{
-			var email = frm.email.value;
-			var atpos=email.indexOf("@");
-			var dotpos=email.lastIndexOf(".");
+	
+    <script>
+        function isValid(frm) {
+            var checkboxes = frm.querySelectorAll('input[name="inp"]');
+            var isChecked = false;
 
-			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
-			{
-				alert("geçerli email adresi girin");
-				return false;
-			}
-			else
-			{
-				alert("E-mail adresi geçerli");
-				return true;
-			}
-		}
-	</script>
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    isChecked = true;
+                    break;
+                }
+            }
+
+            if (!isChecked) {
+                alert("En az bir dil veya çerçeve seçmelisiniz!");
+                return false;
+            }
+
+            var age = frm.age.value;
+            if (!age || isNaN(age) || age <= 0) {
+                alert("Geçerli bir yaş girin");
+                return false;
+            }
+
+            var email = frm.email.value;
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+                alert("Geçerli bir email adresi girin");
+                return false;
+            }
+
+            alert("Form Gönderildi!");
+            return true;
+        }
+    </script>
 </head>
 
 <body>
@@ -103,13 +121,13 @@
 	
 	<form id="form">
 
-		<!-- Details -->
+		<!-- Ayrıntılar -->
 		<div class="form-control">
 			<label for="name" id="label-name">
 				İsim
 			</label>
 
-			<!-- Input Type Text -->
+			<!-- Ad Girişi -->
 			<input type="text"
 				id="name"
 				placeholder="Adınızı giriniz" />
@@ -117,10 +135,10 @@
 
 		<div class="form-control">
 			<label for="email" id="label-email">
-				Email
+				E-mail
 			</label>
 
-			<!-- Input Type Email-->
+			<!-- E-posta Girişi -->
 			<input type="email"
 				id="email"
 				placeholder="E-postanızı giriniz" />
@@ -131,7 +149,7 @@
 				Yaş
 			</label>
 
-			<!-- Input Type Text -->
+			<!-- Yaş Girişi -->
 			<input type="text"
 				id="age"
 				placeholder="Yaşınızı girin" />
@@ -142,7 +160,7 @@
 				Hangi seçenek sizi en iyi tanımlıyor?
 			</label>
 			
-			<!-- Dropdown options -->
+			<!-- Açılan seçenekler -->
 			<select name="role" id="role">
 				<option value="student">Öğrenci</option>
 				<option value="intern">Stajyer</option>
@@ -158,8 +176,8 @@
 				Bizi tavsiye eder misiniz?
 			</label>
 
-			<!-- Input Type Radio Button -->
-			<!-- Input Type Radio Button | Dropdown options -->
+			<!-- Giriş Türü Radyo Düğmesi -->
+            <!-- Giriş Türü Radyo Düğmesi | Açılan seçenekler -->
 			<select name="input" id="input">
 				<option value="yes">Evet</option>
 				<option value="no">Hayır</option>
@@ -168,55 +186,52 @@
 		</div>
 
 		<div class="form-control">
-			<label>Bilinen Diller ve Çerçeveler
-				<small>
-					(Tüm başvuruyu kontrol et)</small>
-			</label>
-			<!-- Input Type Checkbox -->
-			<label for="inp-1">
-				<input type="checkbox"
-					name="inp">C<input></label>
-			<label for="inp-2">
-				<input type="checkbox"
-					name="inp">C++<input></label>
-			<label for="inp-3">
-				<input type="checkbox"
-					name="inp">C#<input></label>
-			<label for="inp-4">
-				<input type="checkbox"
-					name="inp">Java<input></label>
-			<label for="inp-5">
-				<input type="checkbox"
-					name="inp">Python<input></label>
-			<label for="inp-6">
-				<input type="checkbox"
-					name="inp">JavaScript<input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">React<input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Angular<input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Django<input></label>
-			<label for="inp-7">
-				<input type="checkbox"
-					name="inp">Spring<input></label>
-		</div>
+            <label>Bilinen Diller ve Çerçeveler<small> (Tüm başvuruyu kontrol et)</small></label>
+            <label for="inp-1">
+                <input type="checkbox" name="inp" id="inp-1">C
+            </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp" id="inp-2">C#
+            </label>
+            <label for="inp-3">
+                <input type="checkbox" name="inp" id="inp-3">C++
+            </label>
+            <label for="inp-4">
+                <input type="checkbox" name="inp" id="inp-4">Java
+            </label>
+            <label for="inp-5">
+                <input type="checkbox" name="inp" id="inp-5">Python
+            </label>
+            <label for="inp-6">
+                <input type="checkbox" name="inp" id="inp-6">JavaScript
+            </label>
+            <label for="inp-7">
+                <input type="checkbox" name="inp" id="inp-7">React
+            </label>
+            <label for="inp-8">
+                <input type="checkbox" name="inp" id="inp-8">Angular
+            </label>
+            <label for="inp-9">
+                <input type="checkbox" name="inp" id="inp-9">Django
+            </label>
+            <label for="inp-10">
+                <input type="checkbox" name="inp" id="inp-10">Spring
+            </label>
+        </div>
+        
 
 		<div class="form-control">
 			<label for="comment">
 				Herhangi bir yorum veya öneri
 			</label>
 
-			<!-- multi-line text input control -->
+			<!-- çok satırlı metin girişi kontrolü -->
 			<textarea name="comment" id="comment"
 				placeholder="Enter your comment here">
 			</textarea>
 		</div>
 
-		<!-- Multi-line Text Input Control -->
+		<!-- Çok Satırlı Metin Giriş Kontrolü -->
 		<button type="submit" value="submit" onclick="alert('Form Gönderildi!')">
 			Gönder
 		</button>
