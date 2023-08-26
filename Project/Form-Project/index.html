@@ -9,7 +9,6 @@
 	<title>
 		Anket Formu Oluşturma
 	</title>
-
 	<style>
         h1 {
             color: #FFFD8C;
@@ -77,6 +76,25 @@
 			margin-bottom: 20px;
 		}
 	</style>
+	<script>
+		function isValid(frm)
+		{
+			var email = frm.email.value;
+			var atpos=email.indexOf("@");
+			var dotpos=email.lastIndexOf(".");
+
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+			{
+				alert("geçerli email adresi girin");
+				return false;
+			}
+			else
+			{
+				alert("E-mail adresi geçerli");
+				return true;
+			}
+		}
+	</script>
 </head>
 
 <body>
