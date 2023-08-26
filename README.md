@@ -2,5 +2,5 @@
 
 Bu Proje Udemy tarafından alınan bir kurs sayesinde geliştirilmekte.
 
-![Web-Geliştirme](//Github/images/sadık_turan_web_geliştirme_pp.jpg)
+![Web-Geliştirme](https://img-c.udemycdn.com/course/750x422/1258436_2dc3_4.jpg)
 
