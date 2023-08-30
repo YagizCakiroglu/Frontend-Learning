@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line {
+            font-weight: bold;
+            color: brown;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+        }
+        p.about::first-line {
+            color: green;
+        }
+        p::first-letter {
+            font-size: 48px
+        }
+        ::selection {
+            background-color: hotpink;
+        }
+        p::after {
+            content: '\2714';
+            font-size: 35px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Pseudo classes
+    -->
+    <!--
+        Pseudo elements
+    -->
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste in recusandae architecto cupiditate molestias illo consequatur, unde aliquam dolor nulla et autem fugit minus soluta itaque delectus facilis similique. Et.
+    </p>
+    <p class="about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt autem, architecto hic nulla ut non earum ipsa veritatis aliquid consequuntur sequi, a blanditiis rerum doloribus vitae? Dolorem, recusandae accusantium!
+    </p>
+</body>
+</html>
