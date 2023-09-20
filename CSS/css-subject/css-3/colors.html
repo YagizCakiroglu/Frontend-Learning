@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        div {
+            height: 150px;
+            border: 2px solid gray;
+            margin-bottom: 10px;
+        }
+
+        #box1 {
+            background: rgb(255, 0, 0);
+            opacity: .5;
+            /* rba normalde renk veriyor ama rgba gelince opacity yazmaya gerek kalmıyor 
+            https://www.w3schools.com/w3css/w3css_colors.asp#gsc.tab=0
+            https://www.w3schools.com/colors/colors_picker.asp
+            https://www.w3schools.com/colors/colors_gradient.asp
+            */
+            transition: opacity .5s;
+        }
+        #box1:hover {
+            background: rgba(255, 0, 0, 1);
+            opacity: .8;
+        }
+        #box2 {
+            background: rgb(0, 255, 0);
+            opacity: .5;
+            transition: opacity .5s;
+        }
+        #box2:hover {
+            background: rgba(0, 255, 0, 1);
+            opacity: .8;
+        }
+        #box3 {
+            background: rgb(0, 0, 255);
+            opacity: .5;
+            transition: opacity .5s;
+        }
+        #box3:hover {
+            background: rgb(0, 0, 255, 1);
+            opacity: .8;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>
