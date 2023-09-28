@@ -29,6 +29,12 @@ body {
     float: left;
     width: 50%;
 }
+/* önemli altında ki  */
+@media (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
 .clearfix::after {
     content: "";
     display: block;
@@ -36,6 +42,8 @@ body {
 }
 .container {
     width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .img-fluid {
     width: 100%;
