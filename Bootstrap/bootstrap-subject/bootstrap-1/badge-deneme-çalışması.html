@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Örnek</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Ürün Listesi</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Ürün Adı</th>
+                    <th scope="col">Stok Durumu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ürün 1</td>
+                    <td><span class="badge badge-success">Stokta Var</span></td>
+                </tr>
+                <tr>
+                    <td>Ürün 2</td>
+                    <td><span class="badge badge-danger">Stokta Yok</span></td>
+                </tr>
+                <tr>
+                    <td>Ürün 3</td>
+                    <td><span class="badge badge-warning">Sınırlı Stok</span></td>
+                </tr>
+                <tr>
+                    <td>Ürün 4</td>
+                    <td><span class="badge badge-info">Yolda</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS ve Popper.js (Gerekirse) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
