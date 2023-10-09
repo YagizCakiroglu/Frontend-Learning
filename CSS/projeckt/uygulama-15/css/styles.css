@@ -137,7 +137,7 @@ main {
 .features__left {
     background: 
     linear-gradient(to bottom, rgba(250, 81, 30, 0.2), rgba(252, 153, 124, 0.2)),
-    url('../images/features.jpeg');
+    url('../images/marble1-2-large.jpg');
     background-size: cover;
     background-position: top center;
 }
