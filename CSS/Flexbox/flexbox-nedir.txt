@@ -1,0 +1,54 @@
+Flexbox CSS Nedir?
+
+https://www.tercihyazilim.com/Page/flexbox-css
+
+SS Flexbox (Flexible Box) veya esnek kutu modeli, web sayfalarının düzenini ve öğelerini düzenlemek için kullanılan bir CSS düzen modelidir. Flexbox, özellikle öğelerin düzenini, hizalamasını ve dağıtımını kontrol etmek için kullanılır. İşte CSS Flexbox hakkında temel bilgiler:
+
+Esnek Yapı: Flexbox, öğeleri sayfa üzerinde esnek bir şekilde düzenlemenizi sağlar. Öğelerin boyutları ve sıralaması gibi özellikler esneklik kazanır.
+
+Ana Eksen ve Yan Eksen: Flexbox, iki ana eksenle çalışır: ana eksen ve yan eksen. Ana eksen, öğelerin sıralandığı yönu gösterir, genellikle yatay (sağdan sola) veya dikey (yukarıdan aşağıya) olarak belirlenir. Yan eksen, ana eksene dik olan yönu ifade eder.
+
+Esnek Kutular: Flexbox öğelerine "flex-container" ve "flex-item" adı verilen iki temel terimi kullanır. "flex-container," içerisindeki öğeleri sarmalayan bir kutudur ve öğeleri düzenler. "flex-item" ise "flex-container" içerisindeki öğeleri temsil eder.
+
+Hizalama ve Dağıtım: Flexbox ile öğeleri ana eksende hizalama ve yan eksende dağıtma yeteneğine sahipsiniz. Öğeleri merkezlemek, aralarındaki boşluğu ayarlamak veya farklı hizalama seçenekleri kullanmak gibi işlemler kolayca yapılabilir.
+
+Sıralama: Öğeleri sıralamak ve yeniden düzenlemek için "order" özelliğini kullanabilirsiniz. Bu, belirli bir öğenin sıralamasını değiştirmenizi sağlar.
+
+Esnek Genişlik ve Yükseklik: Öğelerin boyutlarını otomatik olarak ayarlamak ve ekran boyutlarına uyum sağlamak için "flex-grow" ve "flex-shrink" özelliklerini kullanabilirsiniz.
+
+Yatay ve Dikey Düzenleme: Flexbox, hem yatay hem de dikey düzenlemeleri kolayca yönetebilmenizi sağlar.
+
+İç İçe Esnek Kutular: Birden fazla "flex-container" iç içe geçebilir, böylece karmaşık düzenler oluşturabilirsiniz.
+
+CSS Flexbox, daha karmaşık düzenler ve hizalamalar oluşturmak için kullanışlı bir araçtır ve daha önce kullanılan float veya inline-block gibi yöntemlere göre daha tutarlı ve daha az kod gerektirir. Bu nedenle, modern web tasarımında sıklıkla tercih edilen bir tekniktir.
+
+Flexbox’ın temel mantığı container içerisindeki öğelerin mevcut alanı en iyi şekilde kullanarak yerleştirilmesidir. Aynı zamanda farklı ekran boyutlarında öğelerin genişliğinin/yüksekliğinin ve sırasının değiştirilmesini sağlar. Flexbox, öğeleri mevcut boş alanı dolduracak şekilde genişletir veya taşmayı önlemek için küçültür.
+
+Flexbox’ta öğeler ya main axis (main start’tan main end’e) ya da cross axis’e (cross start’tan cross end’e) göre yerleştirilirler. Main-axis flex öğelerinin yerleştirildiği birincil eksendir. Bu her zaman yatay olmak zorunda değildir, flex-direction özelliğine bağlıdır. Cross axis ise main axis’e dik olan eksendir. Bunun yönü main axis’e bağlıdır. Şimdi flexbox container ve flexbox öğelerinin özelliklerine bakalım:
+Flexbox container’ın özellikleri:
+1) Display: Flexbox’ın kullanılabilmesi için öncelikle container’ın display özelliğinin flex yapılması gerekir.
+
+2) Flex-direction: Bu main axis’i oluşturur, böylece flex öğelerinin flex container’da yerleştirileceği yön tanımlanmış olunur. Flexbox tek yönlü bir yerleşim sağlar. Flex direction; row, row-reverse, column veya column-reverse olabilir. Default hali ise row’dur.
+
+3) Flex-wrap: Default olarak flex öğelerinin tümü tek bir satıra sığdırılmaya çalışılır. Bunu değiştirebiliriz ve öğelerin istediğimiz şekilde sıralanmasını sağlayabiliriz. Flex-wrap; nowrap, wrap veya wrap-reverse olabilir. Default hali ise nowrap’tir.
+
+4) Flex-flow: Bu, hem flex-wrap hem de flex-direction’ı beraber sağlayan bir özelliktir. Varsayılan hali ise nowrap’tir.
+
+5) Justify-content: Bu, main axis boyunca hizalanmayı sağlar. Öğeler maksimum boyutlarına ulaştıklarında, veya tüm öğeler flexible olmadığında boş kalan alanın dağıtılmasına yardımcı olur. Ayrıca öğelerin satırdan taşmaları durumunda da işe yarar. Justify-content; flex-start, flex-end, center, space-between, space-around, space-evenly olabilir. Default hali ise flex-start’tır.
+
+6) Align-items: Bu, flex öğelerinin geçerli satırdaki cross eksen boyunca nasıl düzenleneceğini sağlar. Bunu, cross axis’in justify content’i gibi düşünebiliriz. Align-items; stretch, flex-start, flex-end, baseline, center olabilir. Default hali ise stretch’tir. Yani öğeler container’ı dolduracak şekilde (min/max width’e uygun şekilde) yerleştirilir.
+
+7) Gap, Row-gap, Column-gap: Bu, flex öğeleri arasındaki boşluğu direkt olarak kontrol eder. Bu aralığı yalnızca öğeler arasında uygular, dış kenarlarda değil.
+
+Flexbox öğelerinin özellikleri:
+
+1) Order: Default olarak öğeler kaynak sıraya yani koda yazılma sırasına göre sıralanır. İlk başta değeri 0’dır. Order sayesinde bu sıralama değiştirilebilir.
+
+2) Flex-grow: Bunun sayesinde öğenin kapladığı alan değiştirilebilir. Tüm öğeler için bu değer 1 olarak tanımlanmışsa tüm öğelerin kapladığı alan aynı olacaktır. Default değeri 0’dır.
+
+3) Flex-shrink: Bu flex öğesinin küçülmesini sağlar. Default hali 1’dir.
+
+4) Flex: Bu, flex-grow, flex-shrink ve flex-basis özelliklerinin birleştirilmiş halidir. Flex-shrink ve flex-basis isteğe bağlıdır. Default hali “0 1 auto”dur. Bu 3 özelliği ayrı ayrı kullanmaktansa bu özelliği kullanmak daha iyidir.
+
+5) Align-self: Bu, tek tek flex öğeleri için varsayılan hizalamanın yani flex container’ın align-items özelliğinin geçersiz kalmasını sağlar. Yani seçilen öğenin konumu diğerlerinden bağımsız olarak değiştirilebilir.
+
