@@ -1,0 +1,24 @@
+Grid Nedir ?
+
+Grid Nedir ?
+Grid, webin iskelet yapısını oluşturur. Temelde Row(satır) ve Column(sütun) olarak adlandırılan yatay ve dikey kılavuz çizgilerden oluşuyor. Bu çizgileri referans alarak web içinde kullanılacak elementlerin yerleşimi sağlanıyor.
+
+Grid, hem tasarımcının tasarım aşamasında daha düzenli ve planlı yapılar çıkarmasını sağladı hem de front end developerların responsive kodlamasına kolaylık sağladı.
+
+Grid Line: Yatay ya da dikey çizgiler olarak da düşünebilirsiniz. Numara ile adlandırılırlar.
+
+Grid Container: Row, column, cell gibi yapıların oluşumunu sağlayan ana kutu.
+
+Grid Row: Yatay kısımlardan oluşan yapılardır.
+
+Grid Cell: Gridin en küçük birimidir. 4 tane grid line arasında bulunur.
+
+Grid Column: Dikey kısımlardan oluşan yapılardır.
+
+Grid Area: Birçok birimden(grid cell) oluşan yapıdır.
+
+Grid Gap: Column ya da row arasındaki boşluklardır.
+
+grid-track: grid column veya grid-row’un genel terimidir.
+
+https://css-tricks.com/snippets/css/complete-guide-grid/
