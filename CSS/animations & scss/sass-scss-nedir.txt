@@ -1,0 +1,2 @@
+SASS ve SCSS Nedir?
+SCSS ile SASS'ın mantığı ve kullanımı aynıdır. SASS'ın aksine SCSS noktalı virgül ve köşeli parantezler ile yazılır. İlk başta CSS'e alışkın olanlar için SASS yerine SCSS tercih etmek daha mantıklı görünebilir. Ancak temiz ve kurallı kod yazımı nedeniyle SASS da tercih edilmektedir.
