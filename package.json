@@ -1,0 +1,11 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Bu yapılan Frontend geliştirme ve öğrenim süreci Sadık Turanın Udemy de satılan \"Komple Uygulamalı Web Geliştirme Eğitimi\" tarafından yapılmaktadır. Kurs Linki: \"https://www.udemy.com/course/komple-web-developer-kursu/\"  Kurs İçeriği: Html, Css, Flexbox, Grid Sass & Scss,  Bootstrap, Javascript, Angular, Firebase, Asp.Net Core, WebApi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
