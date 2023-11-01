@@ -1,0 +1,21 @@
+JavaScript nedir?
+JavaScript, geliştiricilerin etkileşimli web sayfaları oluşturmak için kullandığı bir programlama dilidir. JavaScript işlevleri, sosyal medya akışlarını yenilemekten animasyonlar ve etkileşimli haritalar göstermeye kadar, bir web sitesi kullanıcısının deneyimini iyileştirebilir. İstemci tarafındaki bir betik dili olarak, World Wide Web'in temel teknolojilerinden biridir. Örneğin, internette gezinirken bir görsel döngüsü, görmek için tıkla açılır menüsü ya da bir web sayfasında dinamik olarak değişen öğe renkleri gördüğünüzde JavaScript efektlerini görmüş olursunuz.
+
+JavaScript’in avantajları nelerdir?
+Kolayca öğrenme ve kullanma
+JavaScript'in söz dizimi, Java programlama dilinden esinlenmiştir, öğrenmesi ve kodlaması kolaydır. Geliştiriciler, istemci tarafı komut dosyası oluşturma için neredeyse her web sitesinde ve mobil uygulamada JavaScript kullanır. Node.js, son on yılda arka uç kodlaması için de önemli bir popülerlik kazandı. Birçok büyük akış ve video platformu Node.js'de kodlanmıştır.
+Platform bağımsızlığı kazanma
+Diğer programlama dillerinden farklı olarak, JavaScript'i herhangi bir web sayfasına ekleyebilir ve onu diğer birçok web geliştirme çerçevesi ve dili ile kullanabilirsiniz. JavaScript kodunu yazdıktan sonra herhangi bir makinede çalıştırabilirsiniz. Böylece JavaScript, uygulama geliştirme platformunu bağımsız hale getirir.
+
+Sunucu yükü azaltma
+JavaScript'i sunucu yükünü ve ağ tıkanıklığını azaltmak için kullanabilirsiniz çünkü mantıksal işlemleri çalıştırabilir ve sunucunun çalışmasının çoğunu istemcinin kendisinde yapabilir. Örneğin, bir kayıt formu doldurma sürecini düşünün. JavaScript, cep telefonu alanına 10 basamaklı bir sayı girip girmediğinizi hızlı bir şekilde kontrol eder. Bu istekler sunucuya gönderilirse sayfanız her hata için yeniden yüklenir ve kayıt işlemini çok yavaş ve sıkıcı hale getirir.
+
+Kullanıcı arabirimi güncelleme
+JavaScript, karmaşık bilgileri bulmayı ve işlemeyi kolaylaştıran zarif web siteleri oluşturur. Geliştiriciler, işlevselliği ve okunabilirliği genişletmek ve web sitesi kullanıcı etkileşimini daha verimli hale getirmek için JavaScript'i uygular.
+
+Eş zamanlılığı destekleme
+JavaScript birkaç farklı talimat setini paralel olarak çalıştırabilir. Arka uçta, Node.js aynı miktarda bant genişliği tüketmeden yüksek düzeyde ölçeklendirilmiş sunucu yanıtlarını ele alabilir ve işleyebilir.
+
+TypeScript nedir?
+TypeScript, söz dizimine türler ekleyerek JavaScript'i geliştiren bir programlama dilidir. TypeScript, kod düzenleyici araçlarının kodlama hatalarını erken yakalayabilmesi için JavaScript’e ek söz dizimi ekler. Aynı zamanda TypeScript kodu JavaScript’e dönüşür ve JavaScript ile aynı faydaları sağlar. Ayrıca hem uygulamalarda hem de JavaScript çerçeveleri ve kitaplıklarıyla çalışır.
+
