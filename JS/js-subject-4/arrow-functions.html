@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+    <script>
+        // ES 5
+        // function selam() {
+        //     console.log("merhaba")
+        // }
+
+        var selamES5 = function(isim) {
+            console.log("merhaba" + isim);
+        }
+        selamES5("Ali");
+        
+        // ES6 - arrow function
+        // const selamES6 = () => console.log("merhaba");
+        const selamES6 = (isim) => { console.log("merhaba" + isim);}
+
+        selamES6("Ahmet");
+
+
+        // ES5
+        var toplamES5 = function (a, b) {
+            return a + b;
+        }
+        var sonuc = toplamES5(10,20);
+        console.log(sonuc);
+
+        // ES6
+        const toplamES6 = (a,b) => a + b;
+        sonuc = toplamES6(20, 50);
+        console.log(sonuc);
+    </script>
+</body>
+</html>
