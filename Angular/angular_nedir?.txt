@@ -41,3 +41,5 @@ Firebase ve mongoDB öğrenilecektir.
 Angular için node.js de olması gerekiyor.
 "npm list -g" = yüklü olan npm kütüphanelerini gösterir.
 " npm i @angular/cli " ise anguların son sürümünü indirir.
+Eğer Bilgisayara Anguları indirmek istiyorsanız. Terminalden sudo su yapmanız gerekiyor. Çünkü Root olmanız lazım. Root olduktan sonra ise "npm install -g @angular/cli" komutunu terminale yazarak Anguları indirmiş olursunuz.
+ng new projeadı yaprak proje iner
