@@ -1,0 +1,15 @@
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\bin\Debug\net8.0\Subject-1.exe
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\bin\Debug\net8.0\Subject-1.deps.json
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\bin\Debug\net8.0\Subject-1.runtimeconfig.json
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\bin\Debug\net8.0\Subject-1.dll
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\bin\Debug\net8.0\Subject-1.pdb
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.AssemblyInfoInputs.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.AssemblyInfo.cs
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.csproj.CoreCompileInputs.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.sourcelink.json
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.dll
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\refint\Subject-1.dll
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.pdb
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\Subject-1.genruntimeconfig.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\C#\Subject\Subject-1\obj\Debug\net8.0\ref\Subject-1.dll
