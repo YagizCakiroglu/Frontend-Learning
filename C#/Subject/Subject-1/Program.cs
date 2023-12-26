@@ -1,77 +1,94 @@
-﻿namespace ConsoleApp
+﻿
+namespace ConsoleApp
 {
-    class Comment
+
+    interface IKisi
     {
-        public int CommentId { get; set; }
-        public string Text { get; set; }
+        string adSoyad {get;set;}
+        string adres {get;set;}
+        string departman { get; set; }
+        double maas { get; set; }
+        
+    }
+    interface IPersonel
+    {       
+        string departman { get; set; }
+        void bilgi();
+
     }
 
-    class Product
+    class Yonetici : IPersonel,IKisi
     {
-        public Product()
+        public Yonetici(string _adsoyad,string _adres,string _departman)
         {
-            this.ProductId = (new Random()).Next(11111,99999);
-            this.Comments = new Comment[3];
+            this.adSoyad = _adsoyad;
+            this.adres = _adres;
+            this.departman =_departman;
         }
+        public string adSoyad { get; set; }
+        public string adres { get; set; }
+        public string departman { get; set; }
+        public double maas{ get; set; }
 
-        public Product(int productId):this()
+        public void bilgi()
         {
-            this.ProductId = productId;
+            Console.WriteLine($"{this.adSoyad} isimli personel {this.departman} bölümünde yöneticidir.");
         }
+    }
 
-        public Product(int productId,string name,double price,bool isApproved):this(productId)
+    class Isci: IPersonel,IKisi
+    {
+        public Isci(string _adsoyad,string _adres,string _departman)
         {
-            this.Name = name;
-            this.Price=price;
-            this.IsApproved=isApproved;
+            this.adSoyad = _adsoyad;
+            this.adres = _adres;
+            this.departman =_departman;
         }
+        public string adSoyad { get; set; }
+        public string adres { get; set; }
+        public string departman { get; set; }
+        public double maas { get; set; }
 
-        public int ProductId { get; set; }
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public bool IsApproved { get; set; }
-        public Comment[] Comments { get; set; }
+        public void bilgi()
+        {
+            Console.WriteLine($"{this.adSoyad} isimli personel {this.departman} bölümünde işçidir.");
+        }
+    }
+
+    class Robot : IPersonel
+    {
+        public Robot(string _departman)
+        {
+            this.departman = _departman;
+        }
+        public string departman { get; set; }
+
+        public void bilgi()
+        {
+            Console.WriteLine($"{this.departman} bölümünde bir robot.");            
+        }
     }
 
     class Program
     {
         static void Main(string[] args)
-        {
-            var c1 = new Comment { CommentId=1,Text="Güzel telefon"};
+        {           
+           // Interface
 
-            var p1 = new Product();
+            // IPersonel y = new Yonetici();
+            // IPersonel i = new Isci();
 
-            p1.Comments[0] = c1;
+            var personeller = new IPersonel[3];
 
-            Console.WriteLine(p1.ProductId);
-            Console.WriteLine(p1.Name);
-            Console.WriteLine(p1.Price);
-            Console.WriteLine(p1.IsApproved);
-            Console.WriteLine(p1.Comments[0].Text);
+            personeller[0] = new Yonetici("ali yılmaz","istanbul","finans");
+            personeller[1] = new Isci("ahmet cengiz","kocaeli","üretim");
+            personeller[2] = new Robot("üretim");
 
-            Console.WriteLine("*********************");
+            foreach (var personel in personeller)
+            {
+                personel.bilgi();
+            }
 
-            var p2 = new Product(1213);
-
-            p2.Comments[0] = c1;
-
-            Console.WriteLine(p2.ProductId);
-            Console.WriteLine(p2.Name);
-            Console.WriteLine(p2.Price);
-            Console.WriteLine(p2.IsApproved);
-            Console.WriteLine(p2.Comments[0].Text);
-
-            Console.WriteLine("*********************");
-
-            var p3 = new Product(1231,"samsung s7",3000,true);
-
-            Console.WriteLine(p3.ProductId);
-            Console.WriteLine(p3.Name);
-            Console.WriteLine(p3.Price);
-            Console.WriteLine(p3.IsApproved);
-
-            p3.Comments[0] = c1;
-            Console.WriteLine(p3.Comments[0].Text);
         }
     }
 }
