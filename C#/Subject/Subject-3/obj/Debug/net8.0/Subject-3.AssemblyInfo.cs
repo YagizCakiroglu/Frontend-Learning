@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Subject-1")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Subject-3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Subject-1")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Subject-1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa247e17518b411b534bc1ba2225dbd676ef815a")]
+[assembly: System.Reflection.AssemblyProductAttribute("Subject-3")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Subject-3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment sınıfı tarafından oluşturuldu.
