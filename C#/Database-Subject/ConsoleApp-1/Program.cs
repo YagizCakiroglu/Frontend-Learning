@@ -1,26 +1,42 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
 namespace ConsoleApp
-{
-    class Program
+{       
+    public interface IProductDal
     {
-        static void Main(string[] args)
-        {
-            var products = GetAllProducts();
+        List<Product> GetAllProducts();
+        Product GetProductById(int id);
+        List<Product> Find(string productName);
+        void Create(Product p);
+        void Update(Product p);
+        void Delete(int productId);
+    }
 
-            foreach (var pr in products)
-            {
-                if(pr.Price>10)
-                    Console.WriteLine($"name: {pr.Name} price: {pr.Price}");
-            }
+    public class MySQLProductDal : IProductDal
+    {
+        private MySqlConnection GetMySqlConnection()
+        {
+            string connectionString = @"Server=localhost;port=3306;database=northwind;user=root;password=password;";
+            return new MySqlConnection(connectionString);      
         }
-        
-        static List<Product> GetAllProducts()
+        public void Create(Product p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> GetAllProducts()
         {
             List<Product> products = null;
-            using(var connection = GetMySqlConnection())
 
+            using(var connection = GetMySqlConnection())
             {
                 try
                 {
@@ -31,7 +47,6 @@ namespace ConsoleApp
                     MySqlCommand command = new MySqlCommand(sql,connection);
 
                     MySqlDataReader reader = command.ExecuteReader();
-                    
                     products = new List<Product>();
 
                     while(reader.Read())
@@ -42,7 +57,8 @@ namespace ConsoleApp
                                 ProductId=int.Parse(reader["id"].ToString()),
                                 Name = reader["product_name"].ToString(),
                                 Price = double.Parse(reader["list_price"]?.ToString())
-                            });
+                            }
+                        );
                     }
                     reader.Close();
                 }
@@ -56,27 +72,39 @@ namespace ConsoleApp
                 }
             }
 
-            return products;
+            return products;  
         }
 
-        static MySqlConnection GetMySqlConnection()
+        public Product GetProductById(int id)
         {
-             string connectionString = @"Server=localhost;port=3306;database=northwind;user=root;password=password;";
-            return new MySqlConnection(connectionString);
-            
-        }
-        
-        static void GetSqlConnection()
-        {
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Nortwind;Integrated Security=SSPI;";
+            Product product = null;
 
-            // driver , provider
-
-            using(var connection = new SqlConnection(connectionString))
+            using(var connection = GetMySqlConnection())
             {
-                try{
+                try
+                {
                     connection.Open();
-                    Console.WriteLine("Bağlantı Sağlandı.");
+                    
+                    string sql = "select * from products where id=@productid";
+
+                    MySqlCommand command = new MySqlCommand(sql,connection);
+                    command.Parameters.Add("@productid", MySqlDbType.Int32).Value = id;
+
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    reader.Read();
+
+                    if (reader.HasRows)
+                    {                    
+                        product = new Product()
+                        {                       
+                            ProductId=int.Parse(reader["id"].ToString()),
+                            Name = reader["product_name"].ToString(),
+                            Price = double.Parse(reader["list_price"]?.ToString())
+                        };
+                    }
+                 
+                    reader.Close();
                 }
                 catch(Exception e)
                 {
@@ -87,8 +115,194 @@ namespace ConsoleApp
                     connection.Close();
                 }
             }
-            
+
+            return product;  
         }
+
+        public void Update(Product p)
+        {
+            throw new NotImplementedException();
+        }
+
+        
+        public List<Product> Find(string productName)
+        
+        {
+            List<Product> products = null;
+
+            using(var connection = GetMySqlConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    
+                    string sql = "select * from products where product_name LIKE @productName";
+
+                    MySqlCommand command = new MySqlCommand(sql,connection);
+                    command.Parameters.Add("@productName", MySqlDbType.String).Value = "%"+ productName+"%";
+
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    products = new List<Product>();
+
+                    while(reader.Read())
+                    {
+                        products.Add(
+                            new Product
+                            {
+                                ProductId=int.Parse(reader["id"].ToString()),
+                                Name = reader["product_name"].ToString(),
+                                Price = double.Parse(reader["list_price"]?.ToString())
+                            }
+                        );
+                    }                 
+                 
+                    reader.Close();
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return products;  
+        }
+    }
+
+    public class MsSQLProductDal : IProductDal
+    {
+        private SqlConnection GetMsSqlConnection()
+        {
+           string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Nortwind;Integrated             Security=SSPI;";
+            return new SqlConnection(connectionString);   
+        }
+        public void Create(Product p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> GetAllProducts()
+        {
+            List<Product> products = null;
+
+            using(var connection = GetMsSqlConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    
+                    string sql = "select * from products";
+
+                    SqlCommand command = new SqlCommand(sql,connection);
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    products = new List<Product>();
+
+                    while(reader.Read())
+                    {
+                        products.Add(
+                            new Product
+                            {
+                                ProductId=int.Parse(reader["ProductID"].ToString()),
+                                Name = reader["ProductName"].ToString(),
+                                Price = double.Parse(reader["UnitPrice"]?.ToString())
+                            }
+                        );
+                    }
+                    reader.Close();
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return products;  
+        }
+
+        public Product GetProductById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Product p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> Find(string productName)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ProductManager : IProductDal
+    {
+        IProductDal _productDal;
+        public ProductManager(IProductDal productDal)
+        {
+            _productDal = productDal;
+        }
+        public void Create(Product p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> Find(string productName)
+        {
+           return _productDal.Find(productName);
+        }
+
+        public List<Product> GetAllProducts()
+        {
+            return _productDal.GetAllProducts();
+        }
+
+        public Product GetProductById(int id)
+        {
+            return _productDal.GetProductById(id);
+        }
+
+        public void Update(Product p)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
        
+          var productDal = new ProductManager(new MySQLProductDal());
+
+          var products = productDal.Find("Northwind");
+
+            foreach (var product in products)
+            {
+                Console.WriteLine($"{product.ProductId} - {product.Name}");
+            }
+
+        }
+      
+      
     }
 }
