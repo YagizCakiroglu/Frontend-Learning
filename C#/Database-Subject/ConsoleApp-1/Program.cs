@@ -10,9 +10,10 @@ namespace ConsoleApp
         List<Product> GetAllProducts();
         Product GetProductById(int id);
         List<Product> Find(string productName);
-        void Create(Product p);
-        void Update(Product p);
-        void Delete(int productId);
+        int Count();
+        int Create(Product p);
+        int Update(Product p);
+        int Delete(int productId);
     }
 
     public class MySQLProductDal : IProductDal
@@ -20,14 +21,14 @@ namespace ConsoleApp
         private MySqlConnection GetMySqlConnection()
         {
             string connectionString = @"Server=localhost;port=3306;database=northwind;user=root;password=password;";
-            return new MySqlConnection(connectionString);      
+            return new MySqlConnection(connectionString);       
         }
-        public void Create(Product p)
+        public int Create(Product p)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(int productId)
+        public int Delete(int productId)
         {
             throw new NotImplementedException();
         }
@@ -119,14 +120,12 @@ namespace ConsoleApp
             return product;  
         }
 
-        public void Update(Product p)
+        public int Update(Product p)
         {
             throw new NotImplementedException();
         }
 
-        
         public List<Product> Find(string productName)
-        
         {
             List<Product> products = null;
 
@@ -171,23 +170,112 @@ namespace ConsoleApp
 
             return products;  
         }
+
+        public int Count()
+        {
+            int count = 0; 
+
+            using(var connection = GetMySqlConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    
+                    string sql = "select count(*) from products";
+
+                    MySqlCommand command = new MySqlCommand(sql,connection);
+                    object result = command.ExecuteScalar();
+                    if (result!=null)
+                    {
+                        count = Convert.ToInt32(result); 
+                    }
+                 
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return count;  
+        }
     }
 
     public class MsSQLProductDal : IProductDal
     {
         private SqlConnection GetMsSqlConnection()
         {
-           string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Nortwind;Integrated             Security=SSPI;";
-            return new SqlConnection(connectionString);   
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Nortwind;Integrated Security=SSPI;";
+            return new SqlConnection(connectionString);        
         }
-        public void Create(Product p)
+        public int Create(Product p)
         {
-            throw new NotImplementedException();
+            int result = 0;
+
+            using(var connection = GetMsSqlConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = "insert into products (ProductName,UnitPrice,Discontinued) VALUES (@productname,@unitprice,@discontinued)";
+                    SqlCommand command = new SqlCommand(sql,connection);
+
+                    command.Parameters.AddWithValue("@productname", p.Name);
+                    command.Parameters.AddWithValue("@unitprice", p.Price);
+                    command.Parameters.AddWithValue("@discontinued", 1);
+                    
+                    result = command.ExecuteNonQuery();
+
+                    Console.WriteLine($"{result} adet kayıt eklendi");
+
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            
+            return result;
         }
 
-        public void Delete(int productId)
+        public int Delete(int productId)
         {
-            throw new NotImplementedException();
+            int result = 0;
+
+            using(var connection = GetMsSqlConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = "delete from products where ProductId=@productid";
+                    SqlCommand command = new SqlCommand(sql,connection);
+
+                    command.Parameters.AddWithValue("@productid", productId);
+                    
+                    result = command.ExecuteNonQuery();
+
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            
+            return result;
         }
 
         public List<Product> GetAllProducts()
@@ -235,15 +323,87 @@ namespace ConsoleApp
 
         public Product GetProductById(int id)
         {
-            throw new NotImplementedException();
+            Product product = null;
+
+            using(var connection = GetMsSqlConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    
+                    string sql = "select * from products where ProductId=@productid";
+
+                    SqlCommand command = new SqlCommand(sql,connection);
+                    command.Parameters.AddWithValue("@productid", id);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    reader.Read();
+
+                    if (reader.HasRows)
+                    {                    
+                        product = new Product()
+                        {                       
+                            ProductId=int.Parse(reader["ProductId"].ToString()),
+                            Name = reader["ProductName"].ToString(),
+                            Price = double.Parse(reader["UnitPrice"]?.ToString())
+                        };
+                    }
+                 
+                    reader.Close();
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return product;  
         }
 
-        public void Update(Product p)
+        public int Update(Product p)
+        {
+            int result = 0;
+
+            using(var connection = GetMsSqlConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    string sql = "update products set ProductName=@productname, UnitPrice=@unitprice where ProductId=@productid";
+                    SqlCommand command = new SqlCommand(sql,connection);
+
+                    command.Parameters.AddWithValue("@productname", p.Name);
+                    command.Parameters.AddWithValue("@unitprice", p.Price);
+                    command.Parameters.AddWithValue("@productid", p.ProductId);
+                    
+                    result = command.ExecuteNonQuery();
+
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            
+            return result;
+        }
+
+        public List<Product> Find(string productName)
         {
             throw new NotImplementedException();
         }
 
-        public List<Product> Find(string productName)
+        public int Count()
         {
             throw new NotImplementedException();
         }
@@ -256,14 +416,20 @@ namespace ConsoleApp
         {
             _productDal = productDal;
         }
-        public void Create(Product p)
+
+        public int Count()
         {
-            throw new NotImplementedException();
+            return _productDal.Count();
         }
 
-        public void Delete(int productId)
+        public int Create(Product p)
         {
-            throw new NotImplementedException();
+           return _productDal.Create(p);
+        }
+
+        public int Delete(int productId)
+        {
+            return _productDal.Delete(productId);
         }
 
         public List<Product> Find(string productName)
@@ -281,9 +447,9 @@ namespace ConsoleApp
             return _productDal.GetProductById(id);
         }
 
-        public void Update(Product p)
+        public int Update(Product p)
         {
-            throw new NotImplementedException();
+            return _productDal.Update(p);
         }
     }
 
@@ -292,15 +458,12 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
        
-          var productDal = new ProductManager(new MySQLProductDal());
+           var productDal = new ProductManager(new MsSQLProductDal());
 
-          var products = productDal.Find("Northwind");
+           int result = productDal.Delete(78);
 
-            foreach (var product in products)
-            {
-                Console.WriteLine($"{product.ProductId} - {product.Name}");
-            }
-
+           Console.WriteLine($"{result} adet kayıt silindi.");
+        
         }
       
       
