@@ -1,10 +1,19 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConsoleApp
 {
-    //Entitiy Classes
-    // Product (Id,Name,Price) => Product(Id,Name,Price)
+    public class ShopContext: DbContext
+    {
+        public DbSet<Product> Products {get; set;}
+        public DbSet<Category> Categories {get; set;}
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=shop.db");
+        }
+    }
 
     public class Product
     {
