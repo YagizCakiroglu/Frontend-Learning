@@ -18,7 +18,9 @@ namespace ConsoleApp
         {
             optionsBuilder
                 .UseLoggerFactory(MyLoggerFactory)
-                .UseSqlite("Data Source=shop.db");
+                //.UseSqlite("Data Source=shop.db");
+                .UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=ShopDb;Integrated Security=SSPI;");
+                //4.58
         }
     }
 
