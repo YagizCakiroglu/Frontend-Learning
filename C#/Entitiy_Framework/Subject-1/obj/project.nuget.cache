@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Teo0cZuGFeEkQReZf8sAZtwBeMiDL1tq46TdaBQ3NBtHWkYpFyMPzJQ0sO4qyE8tExmPgYP4U/xvZ6eRO5ILRA==",
+  "dgSpecHash": "+zmjZE81qXOQrCA71MAVZsubxJtbi0engz7l3kCjgQW03MrGgHbWwi3RGeIKxcikuDTwlMy5aZ2Zcdnf5wQnLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\C#\\Entitiy_Framework\\Subject-1\\Subject-1.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,8 @@
     "C:\\Users\\yahiz\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\yahiz\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\yahiz\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\yahiz\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
+    "C:\\Users\\yahiz\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\yahiz\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\yahiz\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\yahiz\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",

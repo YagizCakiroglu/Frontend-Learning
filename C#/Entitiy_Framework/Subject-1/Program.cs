@@ -19,8 +19,8 @@ namespace ConsoleApp
             optionsBuilder
                 .UseLoggerFactory(MyLoggerFactory)
                 //.UseSqlite("Data Source=shop.db");
-                .UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=ShopDb;Integrated Security=SSPI;");
-                //4.58
+                //.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=ShopDb;Integrated Security=SSPI;");
+                .UseMySql(@"server=localhost;port=3306;database=ShopDb;user=root;password=password;");                
         }
     }
 
@@ -46,7 +46,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            DeleteProduct(5);
+            AddProducts();
         }
 
         static void DeleteProduct(int id)
@@ -54,11 +54,11 @@ namespace ConsoleApp
             using(var db = new ShopContext())
             {
 
-                var p = new Product(){Id=5};
+                var p = new Product(){Id=6};
 
                 // db.Products.Remove(p);
                 db.Entry(p).State = EntityState.Deleted;
-                db.SaveChanges();
+                db.SaveChanges();    
 
                 // var p = db.Products.FirstOrDefault(i=>i.Id==id);
 
@@ -67,13 +67,12 @@ namespace ConsoleApp
                 //     db.Products.Remove(p);
                 //     db.SaveChanges();
 
-                //     Console.WriteLine("Veri Silindi");
+                //     Console.WriteLine("veri silindi");
                 // }
             }
         }
         static void UpdateProduct()
         {
-
             using(var db = new ShopContext())
             {
                 var p = db.Products.Where(i=>i.Id==1).FirstOrDefault();
@@ -81,7 +80,7 @@ namespace ConsoleApp
                 if(p!=null)
                 {
                     p.Price = 2400;
-                    
+
                     db.Products.Update(p);
                     db.SaveChanges();
                 }
@@ -184,10 +183,10 @@ namespace ConsoleApp
             {
                 var products = new List<Product>()
                 {
-                    new Product { Name = "İphone 11", Price=3000 },
-                    new Product { Name = "İphone 12", Price=4000 },
-                    new Product { Name = "İphone 13", Price=5000 },
-                    new Product { Name = "İphone 14", Price=6000 }
+                    new Product { Name = "Samsung S6", Price=3000 },
+                    new Product { Name = "Samsung S7", Price=4000 },
+                    new Product { Name = "Samsung S8", Price=5000 },
+                    new Product { Name = "Samsung S9", Price=6000 }
                 };          
 
                 db.Products.AddRange(products);                
@@ -200,7 +199,7 @@ namespace ConsoleApp
         {
             using(var db = new ShopContext())
             {
-                var p = new Product { Name = "İphone 15", Price=8000 }; 
+                var p = new Product { Name = "Samsung S10", Price=8000 }; 
 
                 db.Products.Add(p);                
                 db.SaveChanges();
