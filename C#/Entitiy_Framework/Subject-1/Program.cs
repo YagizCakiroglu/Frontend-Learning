@@ -12,18 +12,40 @@ namespace ConsoleApp
         public DbSet<Product> Products {get;set;}
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+
         public static readonly ILoggerFactory MyLoggerFactory
             = LoggerFactory.Create(builder => { builder.AddConsole(); });   
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
                 .UseLoggerFactory(MyLoggerFactory)
-                //.UseSqlite("Data Source=shop.db");
+                .UseSqlite("Data Source=shop.db");
                 //.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=ShopDb;Integrated Security=SSPI;");
-                .UseMySql(@"server=localhost;port=3306;database=ShopDb;user=root;password=password;");                
+                //.UseMySql(@"server=localhost;port=3306;database=ShopDb;user=root;password=password;");                
         }
     }
 
+    // One to Many
+    // One to One
+    // Many to Many
+
+    public class User
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+    }
+
+    public class Address
+    {
+        public int Id { get; set; }
+        public string Fullname { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
+
+        public int UserId { get; set; }
+    }
     public class Product
     { 
         public int Id { get; set; }
@@ -34,6 +56,8 @@ namespace ConsoleApp
 
         public decimal Price { get; set; }
 
+        public int CategoryId { get; set; }
+
     }
 
     public class Category
@@ -42,6 +66,12 @@ namespace ConsoleApp
         public string Name { get; set; }
     }
 
+    public class Order
+    {
+        public int Id { get; set; }
+        public int ProductId { get; set; }
+        public DateTime DateAdded { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
