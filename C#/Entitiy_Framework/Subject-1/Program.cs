@@ -14,6 +14,7 @@ namespace ConsoleApp
 
         // public DbSet<Order> Orders { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<Address> Addresses { get; set; }
 
 
@@ -39,10 +40,27 @@ namespace ConsoleApp
         public int Id { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
+        public Customer Customer { get; set; }
 
         public List<Address> Addresses { get; set; } //Navigation Property
     }
 
+    public class Customer 
+    {
+        public int Id { get; set; }
+        public string IdentityNumber { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public User User { get; set; }
+        public int UserId { get; set; }
+    }
+
+    public class Supplier
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string TaxNumber { get; set; }
+    }
     public class Address
     {
         public int Id { get; set; }
@@ -83,31 +101,33 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            //InsertUsers();
-            //InsertAddresses();
-
             using(var db = new ShopContext())
             {
-                var user = db.Users.FirstOrDefault(i=>i.Username=="yagizcakiroglu");
+                // var customer = new Customer(){
+                //         IdentityNumber="12313132",
+                //         FirstName="Sadık",
+                //         LastName="Turan",
+                //         User = db.Users.FirstOrDefault(i=>i.Id==3)
+                // };
 
-                if(user!=null)
+                // db.Customers.Add(customer);
+                // db.SaveChanges();
+
+
+                var user = new User()
                 {
-                    user.Addresses = new List<Address>();
+                    Username = "deneme",
+                    Email="deneme@gmail.com",
+                    Customer = new Customer(){
+                        FirstName="Deneme",
+                        LastName="Deneme",
+                        IdentityNumber="13213132"
+                    }
+                };
 
-                    user.Addresses.AddRange(
-                        new List<Address>(){
-                            new Address(){Fullname="Yağız Çakıroğlu",Title="İş adresi 1",Body="İstanbul"},
-                            new Address(){Fullname="Yağız Çakıroğlu",Title="İş adresi 2 ",Body="İstanbul"},
-                            new Address(){Fullname="Yağız Çakıroğlu",Title="İş adresi 3",Body="İstanbul"}
-                        }
-                    );
-
-                    db.SaveChanges();
-                }
+                db.Users.Add(user);
+                db.SaveChanges();
             }
-
-            
-            
         }
 
         static void InsertUsers()
