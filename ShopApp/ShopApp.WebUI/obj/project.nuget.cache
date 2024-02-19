@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "7Ee48NMBmWi3aOEq1xlfXX1bFM8NYPy8TDLfTFzrWoxL5HzjNlTgEHnsEHzH4DSGite2vFNdhSsZArMO9YN9FQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\ShopApp.WebUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yahiz\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\yahiz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\yahiz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\yahiz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
