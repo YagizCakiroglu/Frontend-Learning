@@ -9,8 +9,52 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\slider1.png",
+      "PackagePath": "staticwebassets\\images\\slider1.png"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\slider2.png",
+      "PackagePath": "staticwebassets\\images\\slider2.png"
+    },
+    {
+      "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\images\\slider3.png",
+      "PackagePath": "staticwebassets\\images\\slider3.png"
     },
     {
       "Id": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.WebUI\\wwwroot\\js\\site.js",

@@ -59,3 +59,5 @@ C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.WebUI
 C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.WebUI\obj\Debug\net6.0\ShopApp.WebUI.pdb
 C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.WebUI\obj\Debug\net6.0\ShopApp.WebUI.genruntimeconfig.cache
 C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.WebUI\obj\Debug\net6.0\ref\ShopApp.WebUI.dll
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.WebUI\bin\Debug\net6.0\package-lock.json
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.WebUI\bin\Debug\net6.0\package.json
