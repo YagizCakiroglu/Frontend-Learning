@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ShopApp.WebUI.Data;
 
 namespace ShopApp.WebUI.ViewComponents
 {
@@ -10,14 +11,7 @@ namespace ShopApp.WebUI.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            var categories = new List<Category>()
-            {
-                new Category {Name="Telefonlar",Description="Telefon Kategorisi"},
-                new Category {Name="Bilgisayar",Description="Bilgisayar Kategorisi"},
-                new Category {Name="Elektronik",Description="Elektronik Kategorisi"}
-            };
-
-            return View(categories);
+            return View(CategoryRepository.Categories);
         }
     }
 }
