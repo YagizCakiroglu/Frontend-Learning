@@ -14,17 +14,21 @@ namespace ShopApp.WebUI.Data
         {
             _products = new List<Product>
             {
-                new Product {ProductId=1,Name="Iphone 12",Price=12000,Description="İyi Telefon",IsApproved=false, ImageUrl="1.jpg"},
-                new Product {ProductId=2,Name="Iphone 13",Price=15000,Description="Çok İyi Telefon",IsApproved=true, ImageUrl="2.jpg"},
-                new Product {ProductId=3,Name="Iphone 14",Price=17000,Description="Çok İyi Telefon",IsApproved=true, ImageUrl="3.jpg"},
-                new Product {ProductId=4,Name="Iphone 15",Price=19000,Description="Çok İyi Telefon", ImageUrl="4.jpg"}
+                new Product {ProductId=1,Name="Iphone 7",Price=3000,Description="iyi telefon",IsApproved=false, ImageUrl="1.jpg",CategoryId=1},
+                new Product {ProductId=2,Name="Iphone 8",Price=4000,Description="çok iyi telefon",IsApproved=true, ImageUrl="2.jpg",CategoryId=1},
+                new Product {ProductId=3,Name="Iphone X",Price=5000,Description="çok iyi telefon",IsApproved=true, ImageUrl="3.jpg",CategoryId=1},
+                new Product {ProductId=4,Name="Iphone 11",Price=7000,Description="çok iyi telefon", ImageUrl="4.jpg",CategoryId=1},
+                new Product {ProductId=5,Name="Iphone 12",Price=7000,Description="çok iyi telefon", ImageUrl="4.jpg",CategoryId=1},
+                new Product {ProductId=6,Name="Lenova 7",Price=3000,Description="iyi bilgisayar",IsApproved=false, ImageUrl="1.jpg",CategoryId=2},
+                new Product {ProductId=7,Name="Lenova 8",Price=4000,Description="çok iyi bilgisayar",IsApproved=true, ImageUrl="2.jpg",CategoryId=2},
+                new Product {ProductId=8,Name="Lenova X",Price=5000,Description="çok iyi bilgisayar",IsApproved=true, ImageUrl="3.jpg",CategoryId=2},
+                new Product {ProductId=9,Name="Lenova 11",Price=7000,Description="çok iyi bilgisayar", ImageUrl="4.jpg",CategoryId=2}
             };
         }
 
         public static List<Product> Products
         {
-            get 
-            {
+            get {
                 return _products;
             }
         }

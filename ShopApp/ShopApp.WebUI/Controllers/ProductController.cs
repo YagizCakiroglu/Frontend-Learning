@@ -30,12 +30,27 @@ namespace ShopApp.WebUI.Controllers
             return View(product);
         }
 
-        public IActionResult List()
+
+
+        public IActionResult List(int? id) 
         {
+
+
+            Console.WriteLine(RouteData.Values["controller"]);
+            Console.WriteLine(RouteData.Values["action"]);
+            Console.WriteLine(RouteData.Values["id"]);
+
+
+            var products = ProductRepository.Products;
+
+            if (id!=null)
+            {
+                products = products.Where(p=>p.CategoryId==id).ToList();
+            }
 
             var productViewModel = new ProductViewModel()
             {
-                Products = ProductRepository.Products
+                Products =products
             };
 
             return View(productViewModel);
@@ -44,20 +59,7 @@ namespace ShopApp.WebUI.Controllers
 
         public IActionResult Details(int id)
         {
-            // name: "samsung s6"
-            // price: 3000
-            // description: "iyi telefon"
-
-            // ViewBag.Name = "İphone 11";
-            // ViewBag.Price = 3000;
-            // ViewBag.Description = "İyi Telefon";
-
-            var p = new Product();
-            p.Name = "İphone 11";
-            p.Price = 3000;
-            p.Description = "İyi Telefon";
-
-            return View(p);
+            return View(ProductRepository.GetProductById(id));
         }
     }
 }
