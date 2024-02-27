@@ -15,7 +15,8 @@ namespace ShopApp.WebUI.Data
             {
                 new Category {CategoryId=1,Name="Telefon",Description="Telefon Kategorisi"},
                 new Category {CategoryId=2,Name="Bilgisayar",Description="Bilgisayar Kategorisi"},
-                new Category {CategoryId=3,Name="Elektronik",Description="Elektronik Kategorisi"}
+                new Category {CategoryId=3,Name="Elektronik",Description="Elektronik Kategorisi"},
+                new Category {CategoryId=4,Name="Kitap",Description="Kitap Kategorisi"}
             };
         }
 
@@ -25,7 +26,7 @@ namespace ShopApp.WebUI.Data
             {
                 return _categories;
             }
-        }     
+        }
 
         public static void AddCategory(Category category)
         {
