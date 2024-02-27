@@ -32,13 +32,8 @@ namespace ShopApp.WebUI.Controllers
 
 
 
-        public IActionResult List(int? id) 
+        public IActionResult List(int? id,string q,double? min_price,double? max_price) 
         {
-
-
-            Console.WriteLine(RouteData.Values["controller"]);
-            Console.WriteLine(RouteData.Values["action"]);
-            Console.WriteLine(RouteData.Values["id"]);
 
 
             var products = ProductRepository.Products;
@@ -46,6 +41,11 @@ namespace ShopApp.WebUI.Controllers
             if (id!=null)
             {
                 products = products.Where(p=>p.CategoryId==id).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(q))
+            {
+                products = products.Where(i=>i.Name.Contains(q) || i.Description.Contains(q)).ToList();
             }
 
             var productViewModel = new ProductViewModel()
@@ -60,6 +60,14 @@ namespace ShopApp.WebUI.Controllers
         public IActionResult Details(int id)
         {
             return View(ProductRepository.GetProductById(id));
+        }
+
+
+        public IActionResult Create(string name,double price)
+        {
+            Console.WriteLine(name);
+            Console.WriteLine(price);
+            return View();
         }
     }
 }
