@@ -8,8 +8,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using ShopApp.data.Abstract;
+using ShopApp.data.Concrete.EfCore;
+using ShopApp.business.Abstract;
+using ShopApp.business.Concrete;
 
-namespace shopapp.webui
+namespace ShopApp.WebUI
 {
     public class Startup
     {
@@ -17,6 +21,8 @@ namespace shopapp.webui
         {
             // mvc
             // razor pages
+            services.AddScoped<IProductRepository,EfCoreProductRepository>();
+            services.AddScoped<IProductService,ProductManager>(); 
             services.AddControllersWithViews();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -5,7 +5,7 @@
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Humanizer.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -18,7 +18,7 @@
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+          "lib/netstandard2.1/_._": {
             "related": ".xml"
           }
         },
@@ -44,7 +44,7 @@
           "System.Text.Encoding.CodePages": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -101,7 +101,7 @@
           "Microsoft.CodeAnalysis.Common": "[4.5.0]"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -161,7 +161,7 @@
           "Microsoft.CodeAnalysis.Workspaces.Common": "[4.5.0]"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -223,7 +223,7 @@
           "System.Threading.Channels": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -344,7 +344,7 @@
           "Mono.TextTemplating": "2.2.1"
         },
         "compile": {
-          "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         },
@@ -603,7 +603,7 @@
           "System.CodeDom": "4.4.0"
         },
         "compile": {
-          "lib/netstandard2.0/Mono.TextTemplating.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
@@ -743,7 +743,7 @@
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.CodeDom.dll": {
+          "ref/netstandard2.0/_._": {
             "related": ".xml"
           }
         },
@@ -757,7 +757,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Collections.Immutable.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -786,7 +786,7 @@
       "System.Composition.AttributedModel/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Composition.AttributedModel.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -805,7 +805,7 @@
           "System.Composition.AttributedModel": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Composition.Convention.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -824,7 +824,7 @@
           "System.Composition.Runtime": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Composition.Hosting.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -840,7 +840,7 @@
       "System.Composition.Runtime/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Composition.Runtime.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -861,7 +861,7 @@
           "System.Composition.Runtime": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Composition.TypedParts.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -877,7 +877,7 @@
       "System.IO.Pipelines/6.0.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.IO.Pipelines.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -905,7 +905,7 @@
           "System.Collections.Immutable": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Reflection.Metadata.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -921,7 +921,7 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -940,7 +940,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -1003,7 +1003,7 @@
       "System.Threading.Channels/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Threading.Channels.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -1016,14 +1016,14 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "shopapp.entity/1.0.0": {
+      "ShopApp.entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/shopapp.entity.dll": {}
+          "bin/placeholder/ShopApp.entity.dll": {}
         },
         "runtime": {
-          "bin/placeholder/shopapp.entity.dll": {}
+          "bin/placeholder/ShopApp.entity.dll": {}
         }
       }
     }
@@ -2528,17 +2528,17 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "shopapp.entity/1.0.0": {
+    "ShopApp.entity/1.0.0": {
       "type": "project",
-      "path": "../shopapp.entity/shopapp.entity.csproj",
-      "msbuildProject": "../shopapp.entity/shopapp.entity.csproj"
+      "path": "../ShopApp.entity/ShopApp.entity.csproj",
+      "msbuildProject": "../ShopApp.entity/ShopApp.entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore.Design >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.2",
-      "shopapp.entity >= 1.0.0"
+      "ShopApp.entity >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2548,11 +2548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\shopapp.data\\shopapp.data.csproj",
-      "projectName": "shopapp.data",
-      "projectPath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\shopapp.data\\shopapp.data.csproj",
+      "projectUniqueName": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.data\\ShopApp.data.csproj",
+      "projectName": "ShopApp.data",
+      "projectPath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.data\\ShopApp.data.csproj",
       "packagesPath": "C:\\Users\\yahiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\shopapp.data\\obj\\",
+      "outputPath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2573,8 +2573,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\shopapp.entity\\shopapp.entity.csproj": {
-              "projectPath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\shopapp.entity\\shopapp.entity.csproj"
+            "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.entity\\ShopApp.entity.csproj": {
+              "projectPath": "C:\\Users\\yahiz\\Desktop\\Frontend-Learning\\Frontend-Learning\\ShopApp\\ShopApp.entity\\ShopApp.entity.csproj"
             }
           }
         }

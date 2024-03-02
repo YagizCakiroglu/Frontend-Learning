@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using shopapp.entity;
+using ShopApp.entity;
 
-namespace shopapp.data.Concrete.EfCore
+namespace ShopApp.data.Concrete.EfCore
 {
     public class ShopContext:DbContext
     {
@@ -15,6 +15,12 @@ namespace shopapp.data.Concrete.EfCore
         protected  override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=shopDb");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProductCategory>()
+                .HasKey(c => new { c.CategoryId, c.ProductId });
         }
 
     }

@@ -1,0 +1,6 @@
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.business\obj\Debug\net8.0\ShopApp.business.csproj.AssemblyReference.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.business\obj\Debug\net8.0\ShopApp.business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.business\obj\Debug\net8.0\ShopApp.business.AssemblyInfoInputs.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.business\obj\Debug\net8.0\ShopApp.business.AssemblyInfo.cs
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.business\obj\Debug\net8.0\ShopApp.business.csproj.CoreCompileInputs.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\ShopApp.business\obj\Debug\net8.0\ShopApp.business.sourcelink.json

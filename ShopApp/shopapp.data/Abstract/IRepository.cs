@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace shopapp.data.Abstract
+namespace ShopApp.data.Abstract
 {
     public interface IRepository<T>
     {
@@ -14,6 +14,6 @@ namespace shopapp.data.Abstract
         void Create(T entity);
 
         void Update(T entity);
-        void Delete(int id);
+        void Delete(T entity);
     }
 }

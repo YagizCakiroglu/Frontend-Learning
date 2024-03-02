@@ -2,41 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using shopapp.data.Abstract;
-using shopapp.entity;
+using ShopApp.data.Abstract;
+using ShopApp.entity;
 
-namespace shopapp.data.Concrete.EfCore
+namespace ShopApp.data.Concrete.EfCore
 {
-    public class EfCoreProductRepository : IProductRepository
+    public class EfCoreProductRepository : 
+        EfCoreGenericRepository<Product, ShopContext>, IProductRepository
     {
-        private ShopContext db = new ShopContext();
-        public void Create(Product entity)
-        {
-            db.Products.Add(entity);
-            db.SaveChanges();
-        }
-
-        public void Delete(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<Product> GetAll()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Product GetById(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public List<Product> GetPopularProducts()
         {
-            throw new System.NotImplementedException();
+            using(var context = new ShopContext())
+            {
+                return context.Products.ToList();
+            }
         }
 
-        public void Update(Product entity)
+        public List<Product> GetTop5Products()
         {
             throw new System.NotImplementedException();
         }

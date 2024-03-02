@@ -1,0 +1,12 @@
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\bin\Debug\net8.0\shopapp.entity.deps.json
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\bin\Debug\net8.0\shopapp.entity.dll
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\bin\Debug\net8.0\shopapp.entity.pdb
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\shopapp.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\shopapp.entity.AssemblyInfoInputs.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\shopapp.entity.AssemblyInfo.cs
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\shopapp.entity.csproj.CoreCompileInputs.cache
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\shopapp.entity.sourcelink.json
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\shopapp.entity.dll
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\refint\shopapp.entity.dll
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\shopapp.entity.pdb
+C:\Users\yahiz\Desktop\Frontend-Learning\Frontend-Learning\ShopApp\shopapp.entity\obj\Debug\net8.0\ref\shopapp.entity.dll

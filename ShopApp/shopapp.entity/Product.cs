@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace shopapp.entity
+namespace ShopApp.entity
 {
     public class Product
     {
@@ -14,6 +14,6 @@ namespace shopapp.entity
         public string ImageUrl { get; set; }
         public bool IsApproved { get; set; }
 
-        public List<ProductCategory> ProductCategory { get; set; }
+        public List<ProductCategory> ProductCategories { get; set; }
     }
 }

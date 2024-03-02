@@ -1,5 +1,5 @@
-using ShopApp.WebUI.Models;
 using System.Collections.Generic;
+using ShopApp.entity;
 
 public class ProductViewModel
 {

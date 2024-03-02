@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace shopapp.webui
+namespace ShopApp.WebUI
 {
     public class Program
     {
